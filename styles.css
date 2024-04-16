@@ -1,0 +1,321 @@
+/* E básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del header */
+header {
+    background: #000;
+    color: #c7c7c7;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* Estilos del banner principal */
+
+
+
+#main-banner {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    height: 500px; 
+  }
+  
+  .banner-slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .banner-slide.active {
+    left: 0;
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+  }
+  
+.about { 
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    font-style: normal;
+    font-weight: lighter;
+    font-family:sans-serif;
+    text-align: justify;
+    padding-left: 50%;
+
+}
+
+.btn {
+    background: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #c9302c;
+}
+
+.us{
+    font-size: 80%;
+ padding-top: 1%;
+ line-height: 1.2;
+text-align:center;
+margin-left: 30%;
+margin-right: 30%;}
+
+#about-sunglasses {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.info-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #003d82;
+}
+
+.info-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.info-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+/* para mobile depende el tama;o */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text, .info-image {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .info-text {
+        order: 2; 
+    }
+
+    .info-image {
+        order: 1; 
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 15px 40px;
+    }
+}
+
+
+
+#discover-section {
+    position: relative;
+    height: 500px;
+    background-color: #333; 
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Call to Action dentro del banner , ) LLeva a section Productos----------------------------------------------------------------*/ 
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/16.png') no-repeat center center/cover;
+    opacity: 0.5; 
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2; 
+    color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.cta-button {
+    background-color: #d9534f; 
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c9302c; 
+}
+
+@media (max-width: 768px) {
+    #discover-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+}
+
+
+/* Produts in wite background--- Pro models --------------------------*/
+
+.product-container {
+    display: flex; 
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    padding: 20px;
+    background-color: #f5f5f5;
+    overflow-x: auto; 
+    align-items: center; 
+}
+
+.product-card {
+    flex: 0 0 300px; 
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image {
+    height: auto; 
+    width: 40%;
+}
+
+.product-info, .product-details {
+    padding: 10px;
+}
+
+.product-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; /
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    text-align: center;
+}
+
+.product-card:hover .product-details {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.about-features {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory; /
+}
+
+.feature {
+    flex: 0 0 80%; 
+    border: 1px solid #ccc;
+    scroll-snap-align: start; 
+}
+
+.productoImg{
+    width: 100px;
+}
